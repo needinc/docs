@@ -44,11 +44,11 @@
         "group": "Core frameworks",
         "pages": [
           "frameworks/cancer-protection-system",
-          "frameworks/3. agentic-system/agent",
-          "frameworks/3. agentic-system/harness",
-          "frameworks/3. agentic-system/tools",
-          "frameworks/3. agentic-system/operator-tool",
-          "frameworks/3. agentic-system/5-sidney"
+          "frameworks/agentic-system/agent",
+          "frameworks/agentic-system/harness",
+          "frameworks/agentic-system/tools",
+          "frameworks/agentic-system/operator-tool",
+          "frameworks/agentic-system/5-sidney"
         ]
       }
     ]
