@@ -41,7 +41,7 @@
         ]
       },
       {
-        "group": "Frameworks",
+        "group": "Core frameworks",
         "pages": [
           "frameworks/cancer-protection-system",
           "frameworks/3. agentic-system/agent",
