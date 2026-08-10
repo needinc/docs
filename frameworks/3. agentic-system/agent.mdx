@@ -1,0 +1,17 @@
+---
+title: "1. Agent"
+---
+
+Agent is an AI model that directs its own processes and tool use when accomplishing a task 
+
+<Frame>
+  ![Agent](/images/agent.png "Agent")
+</Frame>
+
+**Agent case the following components:**
+
+- **Harness**: loop that provides context, calls the model and routes tool calls to the relevant infrastructure
+- **Session**: append-only log of model input and output
+- **Sandbox**: execution environment where model can run code
+- **Tools**: capabilities for agents to observe and interact with the world
+- **Orchestration**: management of agent execution through event-driven workflows

@@ -1,0 +1,15 @@
+---
+title: "2. Harness"
+---
+
+**Harness** is the loop that calls model and routes tool calls to the relevant infrastructure.
+
+<Frame>
+  ![Harness](/images/harness.png "Harness")
+</Frame>
+
+Harness consists of the following core components:
+
+- **Agent loop**: the cycle that calls the model, routes the model's tool calls to the relevant infrastructure, and feeds the results back into the next step
+- **Context management**: controls what the model can see
+- **Tool calls**: structured requests made by the model to utilize a tool

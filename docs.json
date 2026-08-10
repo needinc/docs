@@ -43,7 +43,12 @@
       {
         "group": "Frameworks",
         "pages": [
-          "frameworks/cancer-protection-system"
+          "frameworks/cancer-protection-system",
+          "frameworks/3. agentic-system/agent",
+          "frameworks/3. agentic-system/harness",
+          "frameworks/3. agentic-system/tools",
+          "frameworks/3. agentic-system/operator-tool",
+          "frameworks/3. agentic-system/5-sidney"
         ]
       }
     ]
