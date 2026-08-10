@@ -34,16 +34,14 @@
     },
     "groups": [
       {
-        "group": "Getting Started",
+        "group": "Core architecture",
         "pages": [
-          "index",
-          "quickstart"
+          "frameworks/cancer-protection-system"
         ]
       },
       {
-        "group": "Core frameworks",
+        "group": "Agentic system",
         "pages": [
-          "frameworks/cancer-protection-system",
           "frameworks/agentic-system/agent",
           "frameworks/agentic-system/harness",
           "frameworks/agentic-system/tools",
