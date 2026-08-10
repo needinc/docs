@@ -31,7 +31,22 @@
           "icon": "newspaper"
         }
       ]
-    }
+    },
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "Frameworks",
+        "pages": [
+          "frameworks/cancer-protection-system"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
