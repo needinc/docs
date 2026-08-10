@@ -34,7 +34,7 @@
     },
     "groups": [
       {
-        "group": "Core architecture",
+        "group": "CPS architecture",
         "pages": [
           "frameworks/cancer-protection-system"
         ]
