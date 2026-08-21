@@ -2,4 +2,112 @@
 title: "Agentic system"
 ---
 
-![Image](/images/image-1.png "Image")
+Agentic system is a system of AI agents that drives the product with supporting systems
+
+<Frame>
+  ![Image](/images/image-11.png "Image")
+</Frame>
+
+### Components of the agentic system
+
+- **Core system**: System of AI agents that drives the products
+
+- **Eval system:** System that evaluates execution results and manages data required for evaluation
+- **Observability system**: System that provides visibility of agent traces, context window, and aggregate metrics
+
+- **Recursive self improvement system**: System that autonomously improve agent's harness and model performance on the core tasks in the cancer workflow
+
+---
+
+# Core system
+
+<Frame>
+  ![Image](/images/image-12.png "Image")
+</Frame>
+
+**Core system** is A system of AI agents that drives the product. It is consisted of:
+
+- **Outcome Machine**: A long-running system that tracks each policyholder’s cancer journey, determines the next-best actions, and coordinates their execution within clinical, safety, consent, and operational constraints.
+- **Marius:** The operator work interface through which people receive, execute, update, and complete dispatched tasks, returning status, evidence, and results to the originating workflow, with full workflow data capture.
+- **Operators:** Human agents that execute tasks
+
+---
+
+# Observability system
+
+<Frame>
+  ![Image](/images/image-16.png "Image")
+</Frame>
+
+**Observability system**<br />A system that captures and connects traces, actions, outputs, and outcomes across the platform, making system behavior visible, auditable, and explainable.<br />
+
+**Types of traces and outputs**
+
+- **Agent traces \+ outputs:** The sequence of steps, decisions, tool calls, and intermediate states an AI agent takes to complete a task, together with its final output.
+- **Operator traces \+ outputs:** The sequence of actions, decisions, tool usage, and interventions a human operator takes to complete a task, together with the resulting output.
+- **Policyholder traces \+ outcomes:** The sequence of interactions, decisions, and care events a policyholder experiences throughout their cancer journey, together with the resulting clinical, operational, and financial outcomes.
+
+---
+
+# Evaluation system
+
+<Frame>
+  ![Image](/images/image-15.png "Image")
+</Frame>
+
+**Evaluation system**: A system that measures the quality of agent behavior and outcomes by evaluating traces and outputs against trusted data, reference standards, and explicit criteria—producing signals that can be used to monitor, compare, and improve the system.
+
+- **Anonymized datasets:** Representative, de-identified real-world cases used to evaluate system performance across tasks, scenarios, and populations.
+- **Golden outputs:** Expert-validated reference outputs that represent the expected or ideal result for a given task.
+- **Golden rubrics:** Expert-defined criteria that specify what constitutes a correct, high-quality, and safe output or behavior.
+- **Curated traces:** Selected agent trajectories that capture high-quality behavior, representative workflows, edge cases, and failure modes.
+- **Verifiers:** Automated or human evaluators that determine whether traces, outputs, or outcomes satisfy defined requirements.
+- **RL rewards:** Scores derived from evaluations that quantify the quality of agent behavior and can be used to optimize models and policies.
+
+---
+
+## RSI system
+
+<Frame>
+  ![Image](/images/image-17.png "Image")
+</Frame>
+
+## <br />**What RSI improves**
+
+- Need Harnesses / External Harnesses The agent scaffolding, prompts, workflows, tools, memory, policies, and control logic that determine how a model performs a task.
+- Need Models / External Models The underlying AI models used by harnesses to reason, generate outputs, and interact with tools and environments.
+
+## **RSI Agents**
+
+Agents that orchestrate the recursive improvement process by designing experiments, running rollouts, analyzing evaluation results, and determining how harnesses or models should be updated.
+
+## Harness RSI
+
+Harness RSI An experimentation loop that improves agent performance by modifying the system around the model while keeping the underlying model fixed or interchangeable.
+
+- **Optimization Loop:** The iterative process of generating candidate harness configurations, running them against representative tasks, evaluating their behavior, and selecting improvements.
+- **Rollouts:** Executed task trajectories containing the agent's actions, tool calls, intermediate states, and final outputs.
+- **Evaluation & Optimization:** The process of scoring rollouts, comparing candidate behaviors, identifying improvements, and selecting changes to the harness.
+- **Harness Updates:** Changes to prompts, workflows, tools, memory, policies, routing, orchestration, or other components of the agent harness.
+
+## Model RSI
+
+**Model RSI:** A training loop that improves agent performance by updating the underlying model while keeping the surrounding harness relatively fixed.
+
+- **Training Loop**: The iterative process of generating rollouts, evaluating them, converting evaluation results into learning signals, and updating model parameters.
+- **Rollouts:** Executed task trajectories containing the agent's actions, tool calls, intermediate states, and final outputs.
+- **Trainer \+ Learning Algorithm:**  The training infrastructure and optimization method that transform evaluated rollouts into model updates.
+- **Model Updates:** Changes to model parameters or learned behavior produced through reinforcement learning, fine-tuning, distillation, or other learning methods.
+
+## Need RL Environments
+
+Need RL Environments is a self-contained environment for creating, running, and evaluating agent tasks. It packages the task definitions and resources together with the runtime needed to execute them reproducibly.
+
+- **Dataset**: A versioned collection of related tasks, typically representing an evaluation benchmark, training set, or scenario suite.
+- **Task**: The atomic unit of work given to an agent. A task defines what the agent must accomplish, the environment in which it operates, and how its result is evaluated.
+- **Tools:** Capabilities made available to the agent while solving a task—for example APIs, MCP servers, browser/computer interfaces, databases, search, or domain-specific actions.
+- **Reward Functions & Verifiers: **Mechanisms that evaluate agent behavior and outputs against defined criteria and convert those evaluations into optimization signals.<br />Environment Runtime The execution layer that manages tasks, state, tool interactions, rollouts, and communication between agents and environments.
+
+Need RL Environment SDK is the interface layer connecting harness and model improvement systems to standardized environments, datasets, tools, runtimes, and evaluation mechanisms.
+
+The goal of this SDK is enable Need to align frontier model development towards improving capabilities that is critical to deliver better cancer outcomes.

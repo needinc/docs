@@ -1,6 +1,8 @@
 ---
-title: "Agent"
+title: "Core concepts"
 ---
+
+# **Agent**
 
 Agent is an AI model that directs its own processes and tool use when accomplishing a task.
 
@@ -13,3 +15,64 @@ Agent is an AI model that directs its own processes and tool use when accomplish
 - **Sandbox**: execution environment where model can run code
 - **Tools**: capabilities for agents to observe and interact with the world
 - **Orchestration**: management of agent execution through event-driven workflows
+
+---
+
+# **Harness**
+
+Harness is the loop that calls model and routes tool calls to the relevant infrastructure.
+
+![Image](/images/image-7.png "Image")
+
+**Definition**
+
+- **Agent loop**: the cycle that calls the model, routes the model's tool calls to the relevant infrastructure, and feeds the results back into the next step
+- **Context management**: controls what the model can see
+- **Tool calls**: structured requests made by the model to utilize a tool
+
+---
+
+# **Tools**
+
+Tools give agents capabilities to observe and interact with the world.
+
+<Frame>
+  ![Image 8](/images/image-8.png "Image 8")
+</Frame>
+
+**Category of tools**
+
+1. **User data tools**<br />Tools that retrieve and update user-specific data<br />E.g., patient profiles, medical history, preferences, symptoms, or prior interactions
+2. **Knowledge tools**<br />Tools that retrieve and update knowledge<br />E.g., node map, internal playbooks, clinical guidelines, research papers, or drug databases
+3. **Computation tools**<br />Tools that calculate, analyze, or transform information<br />E.g., data analysis, running inference on TSM
+4. **Command tools**<br />Tools that trigger commands in software systems<br />E.g., call another agent, execute code, send Kakao message, appointment booking, or stable coin payment to a Halo
+5. **Operator tool**<br />Tools that route work to operators<br />E.g., Halo review, nurse escalation, beam assignment, internal operator assignment, or approval requests
+6. **Learning tool** <br />Tools that enable the improvement of the agentic system<br />E.g., Agent trace visibility tool, session replay, prompt update tool, rubric generation tool
+
+---
+
+# **Marius**
+
+Marius is the set of applications through which operators receive and execute tasks dispatched by an agent
+
+![Image](/images/image-5.png "Image")
+
+**Definition**
+
+- **Agent**: Agent AI model that directs its own processes and tool use when accomplishing a task
+- **Operators:** Human agents that execute tasks
+- **Operator tool:** Tools that route tasks to operators
+- **Marius:** The set of applications through which operators receive and execute tasks dispatched by an agent
+
+---
+
+# Sidney
+
+Sidney is the set of applications through which developers design and engineer the agentic system
+
+![Image](/images/image-6.png "Image")
+
+**Definition**
+
+- **Developers**: Need humans which design and engineer the agentic system
+- **Developer product interface (Sidney)**: The set of applications through which developers design and engineer the agentic system

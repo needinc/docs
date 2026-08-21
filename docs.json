@@ -43,10 +43,6 @@
         "group": "Agentic system",
         "pages": [
           "frameworks/agentic-system/agent",
-          "frameworks/agentic-system/harness",
-          "frameworks/agentic-system/tools",
-          "frameworks/agentic-system/operator-tool",
-          "frameworks/agentic-system/5-sidney",
           "untitled-page"
         ]
       }
