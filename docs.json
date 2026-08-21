@@ -34,10 +34,18 @@
     },
     "groups": [
       {
-        "group": "CPS architecture",
+        "group": "Overview",
         "pages": [
           "frameworks/cancer-protection-system"
         ]
+      },
+      {
+        "group": "Policyholder product",
+        "pages": []
+      },
+      {
+        "group": "Hero product",
+        "pages": []
       },
       {
         "group": "Agentic system",
@@ -45,6 +53,10 @@
           "frameworks/agentic-system/agent",
           "untitled-page"
         ]
+      },
+      {
+        "group": "Data infrastructure",
+        "pages": []
       }
     ]
   },
